@@ -1,0 +1,427 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+  -webkit-animation: makeitblue 6s linear;
+  -moz-animation: makeitblue 6s linear;
+  -o-animation: makeitblue 6s linear;
+  animation: makeitblue 6s linear;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+#wrap {
+  width: 960px;
+  max-width: 100%;
+  min-height: 50px;
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+.cloud {
+  width: 200px;
+  height: 200px;
+}
+.cloud img {
+  float: right;
+}
+
+.grass {
+  width: 100%;
+  height: 30%;
+  background: purple;
+  position: absolute;
+  bottom: 0;
+  z-index: 75;
+  border-top: 1px solid #000;
+}
+
+.moon {
+  width: 120px;
+  height: 120px;
+  background: #ebebeb;
+  position: absolute;
+  top: 10%;
+  right: 20%;
+  border-radius: 100px;
+  -webkit-box-shadow: 1px 0 5px 1px #000;
+  -moz-box-shadow: 1px 0 5px 1px #000;
+  -o-box-shadow: 1px 0 5px 1px #000;
+  box-shadow: 1px 0 5px 1px #000;
+}
+
+#sidetoside {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  z-index: 50;
+  -webkit-animation: sidetoside 145s linear infinite;
+  -moz-animation: sidetoside 145s linear infinite;
+  -o-animation: sidetoside 145s linear infinite;
+  animation: sidetoside 145s linear infinite;
+}
+
+#distant {
+  position: absolute;
+  top: 20%;
+  z-index: 5;
+  -webkit-animation: distant 65s linear infinite;
+  -moz-animation: distant 65s linear infinite;
+  -o-animation: distant 65s linear infinite;
+  animation: distant 65s linear infinite;
+}
+
+#farthest {
+  position: absolute;
+  top: 60%;
+  z-index: 1;
+  -webkit-animation: farthest 35s linear infinite;
+  -moz-animation: farthest 35s linear infinite;
+  -o-animation: farthest 35s linear infinite;
+  animation: farthest 35s linear infinite;
+}
+
+#shoot {
+  -webkit-animation: shooting 7s linear;
+  -moz-animation: shooting 7s linear;
+  -o-animation: shooting 7s linear;
+  animation: shooting 7s linear;
+}
+
+#shade {
+  -webkit-animation: shadow 6s linear;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.rabbit {
+  width: 65px;
+  height: 31px;
+  top: -25px;
+  right: 0;
+  position: absolute;
+}
+
+#right-left {
+  -webkit-animation: quickest 2s;
+  -moz-animation: quickest 2s;
+  -o-animation: quickest 2s;
+  animation: quickest 2s;
+  -webkit-animation-delay: 5s;
+  -moz-animation-delay: 5s;
+  -o-animation-delay: 5s;
+  animation-delay: 5s;
+  opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* In another separate file possibly, to ignore */
+@-webkit-keyframes sidetoside {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 110%;
+  }
+}
+
+@-moz-keyframes sidetoside {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 110%;
+  }
+}
+
+@-o-keyframes sidetoside {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 110%;
+  }
+}
+
+@keyframes sidetoside {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 110%;
+  }
+}
+
+@-webkit-keyframes distant {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 110%;
+  }
+}
+
+@-moz-keyframes distant {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 110%;
+  }
+}
+
+@-o-keyframes distant {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 110%;
+  }
+}
+
+@keyframes distant {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 110%;
+  }
+}
+
+@-webkit-keyframes shooting {
+  0% {
+    top: 100%;
+  }
+
+  100% {
+    top: 10%;
+  }
+}
+
+@-moz-keyframes shooting {
+  0% {
+    top: 100%;
+  }
+
+  100% {
+    top: 10%;
+  }
+}
+
+@-o-keyframes shooting {
+  0% {
+    top: 100%;
+  }
+
+  100% {
+    top: 10%;
+  }
+}
+
+@keyframes shooting {
+  0% {
+    top: 100%;
+  }
+
+  100% {
+    top: 10%;
+  }
+}
+
+@-webkit-keyframes makeitblue {
+  0% {
+    background: #4aa1d2;
+  }
+
+  100% {
+    background: #3a51a4;
+  }
+}
+
+@-moz-keyframes makeitblue {
+  0% {
+    background: #4aa1d2;
+  }
+
+  100% {
+    background: #3a51a4;
+  }
+}
+
+@-o-keyframes makeitblue {
+  0% {
+    background: #4aa1d2;
+  }
+
+  100% {
+    background: #3a51a4;
+  }
+}
+
+@keyframes makeitblue {
+  0% {
+    background: #4aa1d2;
+  }
+
+  100% {
+    background: #3a51a4;
+  }
+}
+
+@-webkit-keyframes shadow {
+  100% {
+    background: #3aa463;
+  }
+}
+
+@-moz-keyframes shadow {
+  100% {
+    background: #3aa463;
+  }
+}
+
+@-o-keyframes shadow {
+  100% {
+    background: #3aa463;
+  }
+}
+
+@keyframes shadow {
+  100% {
+    background: #3aa463;
+  }
+}
+
+@-webkit-keyframes farthest {
+  0% {
+    right: 0;
+  }
+
+  100% {
+    right: 110%;
+  }
+}
+
+@-moz-keyframes farthest {
+  0% {
+    right: 0;
+  }
+
+  100% {
+    right: 110%;
+  }
+}
+
+@-o-keyframes farthest {
+  0% {
+    right: 0;
+  }
+
+  100% {
+    right: 110%;
+  }
+}
+
+@keyframes farthest {
+  0% {
+    right: 0;
+  }
+
+  100% {
+    right: 110%;
+  }
+}
+
+@-webkit-keyframes quickest {
+  0% {
+    right: 0;
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  100% {
+    right: 110%;
+  }
+}
+
+@-moz-keyframes quickest {
+  0% {
+    right: 0;
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  100% {
+    right: 110%;
+  }
+}
+
+@-o-keyframes quickest {
+  0% {
+    right: 0;
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  100% {
+    right: 110%;
+  }
+}
+
+@keyframes quickest {
+  0% {
+    right: 0;
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  100% {
+    right: 110%;
+  }
+}

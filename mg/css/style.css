@@ -1,0 +1,121 @@
+body {
+    background-image: url('../images/space.png');
+    background-repeat: repeat;
+}
+
+
+
+
+
+
+#rocket {
+	position: absolute;
+	left: 1200px;
+	top: 600px;
+}
+div.moon {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#666), to(#ccc));
+    background-image: -webkit-linear-gradient(left, #666, #ccc); 
+
+    position: absolute;
+	left: 1300px;
+    top: 600px;
+}
+div.planet-destination {
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    background-image: -webkit-linear-gradient(left, #8d1bc3, #c879ff);
+
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+div.planet1 {
+	height: 70px;
+	width: 70px;
+	border-radius: 100%;
+	background-image: -webkit-linear-gradient(left, #0039a6, #008db8);
+
+	position: absolute;
+	left: 1000px;
+	top: 50px;
+}
+div.planet2 {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-image: -webkit-linear-gradient(left, #28d034, #77e770);
+
+    position: absolute;
+    left: 100px;
+    top: 500px;
+
+}
+div.planet3 {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    background-image: -webkit-linear-gradient(left, #ea2d9a, #f478bf);
+
+    position: absolute;
+    left: 400px;
+    top: 400px;
+}
+
+
+#burst-8 {
+    background-image: -webkit-linear-gradient(right, #3c2411, #bf8e60);
+    width: 80px;
+    height: 80px;
+    position: relative;
+    text-align: center;
+    -webkit-transform: rotate(20deg);
+}
+#burst-8:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 80px;
+    background-image: -webkit-linear-gradient(left, #3c2411, #bf8e60);
+    -webkit-transform: rotate(135deg);
+}
+
+#heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+}
+#heart:before,
+#heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: #ea2d9a;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+}
+#heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+}
+
+
+
+#sidetoside {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  z-index: 50;
+  -webkit-animation: sidetoside 145s linear infinite;
+
