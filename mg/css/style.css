@@ -1,6 +1,7 @@
 body {
     background-image: url('../images/space.png');
     background-repeat: repeat;
+    overflow: hidden;
 }
 
 

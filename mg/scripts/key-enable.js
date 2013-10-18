@@ -13,22 +13,22 @@ $(document).ready(function() {
 
         	/* Animate the rocket left */
 			case 37:
-				$('#rocket').animate({left: "-=10px"}, 'fast');
+				animate('rocket', {left: -7});
 				break;
 			
 			/* Animate the rocket up */
 			case 38:
-				$('#rocket').animate({top: "-=10px"}, 'fast');
+				animate('rocket', {top: -7});
 				break;
 			
 			/* Animate the rocket right */
 			case 39:
-				$('#rocket').animate({left: "+=10px"}, 'fast');
+				animate('rocket', {left: 7});
 				break;
 
 			/* Animate the rocket down */
 			case 40:
-				$('#rocket').animate({top: "+=10px"}, 'fast');
+				animate('rocket', {top: 7});
 				break;
 			default:
 				break;
