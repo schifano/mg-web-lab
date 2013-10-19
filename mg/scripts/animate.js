@@ -1,6 +1,8 @@
 var colRegister = new Object(); // Holds collision events
 var disableAnimation = false;
-
+var expImg = new Image();
+var timestamp = new Date().getTime();
+expImg.src = 'images/explosion1.gif?' + timestamp;
 
 // Takes two HTML objects, and executes a function when they overlap
 function register_collision(object1id, object2id, colFunction){
@@ -96,7 +98,7 @@ function explode_rocket(){
 	// Position the explosion to be centered on ship (this will need to be adjusted if the ship or explosion image is changed)
 	rocketCoord = document.getElementById('rocket').getBoundingClientRect();
         explosionImg.style.position = 'absolute';
-	explosionImg.style.left = rocketCoord.left - 70 + 'px';
+	explosionImg.style.left = rocketCoord.left - 60 + 'px';
 	explosionImg.style.top = rocketCoord.top - 60 + 'px';
         explosionImg.style.zIndex = '-1';
         
@@ -104,7 +106,7 @@ function explode_rocket(){
         // Hide the rocket and display the explosion
         document.getElementById('rocket').style.visibility = 'hidden';
         document.getElementById('pageContainer').appendChild(explosionImg);
-        document.getElementById('explosionAnimation').src = 'images/explosion1.gif';
+        document.getElementById('explosionAnimation').src = 'images/explosion1.gif?'+timestamp;
         
         // Hide the explosion after 2.5 seconds
 	setTimeout(function(){ document.getElementById('explosionAnimation').style.visibility = 'hidden'; }, 2500);
