@@ -30,7 +30,7 @@ register_collision('rocket', 'burst-8', explode_rocket);
 
 // ######## How to trigger a custom action when a collision occures ########
 // Currently the only built in action is to explode the rocket (explode_rocket). Custom actions can be created easily with javascript.
-// In this example, movement is disabled, and the rocket image is changed to an explosion using jquery. 
+// In this example, movement is disabled, and the rocket image is changed to an explosion using jquery:
 /*
 	register_collision('rocket', 'burst-8', function (){
 		disable_movement(true);

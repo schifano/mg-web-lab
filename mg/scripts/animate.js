@@ -1,7 +1,5 @@
 var colRegister = new Object(); // Holds collision events
 var disableAnimation = false;
-explosion = new Image();
-explosion.src = 'images/explosion1.gif';
 
 
 // Takes two HTML objects, and executes a function when they overlap
@@ -36,6 +34,7 @@ function check_collision(object1id, object2id, padding){
 //
 // Example usage: 
 // animate('rocket', {top: -7});   // Moves the object with id 'rocket' up 7 pixels:
+// Returns true when the object is moved, returns false on collision
 
 function animate(id, properties){
     if(disableAnimation == true) return false;
@@ -67,13 +66,12 @@ function animate(id, properties){
             if(check_collision(id, obj2id, 25)){
                 // A collision has occurred, so execute the associated function
                 colRegister[id][obj2id]();
+                return false;
             }
             
             }
         }
     }
-    
-    
     
     return true;
 }
@@ -83,14 +81,34 @@ function disable_movement(disable){
 }
 
 function explode_rocket(){
-        disableAnimation = true; // Prevents the player from moving the explosion
-	document.getElementById('rocket').src = 'images/explosion1.gif';
+        disable_movement(true); // Prevents the player from moving the explosion
 	
 	
-	// Reposition so explosion is centered on ship (this will need to be adjusted if the ship or explosion image is changed)
+        
+        
+        // Create the explosion object
+        var explosionImg = document.createElement("img");
+        explosionImg.id = 'explosionAnimation';
+        
+        
+	
+        
+	// Position the explosion to be centered on ship (this will need to be adjusted if the ship or explosion image is changed)
 	rocketCoord = document.getElementById('rocket').getBoundingClientRect();
-	document.getElementById('rocket').style.left = rocketCoord.left - 70 + 'px';
-	document.getElementById('rocket').style.top = rocketCoord.top - 60 + 'px';
-	setTimeout(function(){ document.getElementById('rocket').style.visibility = 'hidden'; }, 2500);
+        explosionImg.style.position = 'absolute';
+	explosionImg.style.left = rocketCoord.left - 70 + 'px';
+	explosionImg.style.top = rocketCoord.top - 60 + 'px';
+        explosionImg.style.zIndex = '-1';
+        
+        
+        // Hide the rocket and display the explosion
+        document.getElementById('rocket').style.visibility = 'hidden';
+        document.getElementById('pageContainer').appendChild(explosionImg);
+        document.getElementById('explosionAnimation').src = 'images/explosion1.gif';
+        
+        // Hide the explosion after 2.5 seconds
+	setTimeout(function(){ document.getElementById('explosionAnimation').style.visibility = 'hidden'; }, 2500);
+        
+        // Display the game over prompt .5 seconds after the explosion ends
         setTimeout(function(){ if(confirm("Your ship and its cargo were destroyed. Fortunately, the crew was able to escape at the last minute!\n\nTry again?")){location.reload();}else{alert("Thanks for playing!\n\n-Team Skynet\n\n\n(Hint: try clicking around.)")} }, 3000)
 }
